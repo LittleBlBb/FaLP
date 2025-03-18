@@ -63,8 +63,10 @@ let max n =
             max1 n1 newMax
     max1 n 0
 
-let numBypass number acc func =
+let numBypass number (acc: int option) func =
+    let accValue = defaultArg acc 0
     accValue + func number
+    
 
 [<EntryPoint>]
 let main(args : string[]) = 
@@ -83,16 +85,32 @@ let main(args : string[]) =
     let choiceF = choice 5 false
     System.Console.WriteLine "choiceF"
     System.Console.WriteLine choiceF  
-    let numBypassSumRes = numBypass 123 5 cifrSum
+
+    //С указанием начального значения
+    let numBypassSumRes = numBypass 123 (Some 5) (fun x -> cifrSum x)
     System.Console.WriteLine "numBypassSumRes"
     System.Console.WriteLine numBypassSumRes   
-    let numBypassMulRes = numBypass 513 cifrMult
+    let numBypassMulRes = numBypass 513 (Some 5) (fun x -> cifrMult x)
     System.Console.WriteLine "numBypassMulRes"
     System.Console.WriteLine numBypassMulRes   
-    let numBypassMinRes = numBypass 123 5 min
+    let numBypassMinRes = numBypass 123 (Some 5) (fun x -> min x)
     System.Console.WriteLine "numBypassMinRes"
     System.Console.WriteLine numBypassMinRes  
-    let numBypassMaxRes = numBypass 123 5 max
+    let numBypassMaxRes = numBypass 123 (Some 5) (fun x -> max x)
     System.Console.WriteLine "numBypassMaxRes"
-    System.Console.WriteLine numBypassMaxRes 
+    System.Console.WriteLine numBypassMaxRes    
+    
+    //Без указания начального значения
+    let numBypassSumRes2 = numBypass 123 None (fun x -> cifrSum x)
+    System.Console.WriteLine "numBypassSumRes2"
+    System.Console.WriteLine numBypassSumRes2  
+    let numBypassMulRes2 = numBypass 513 None (fun x -> cifrMult x)
+    System.Console.WriteLine "numBypassMulRes2"
+    System.Console.WriteLine numBypassMulRes2   
+    let numBypassMinRes2 = numBypass 123 None (fun x -> min x)
+    System.Console.WriteLine "numBypassMinRes2"
+    System.Console.WriteLine numBypassMinRes2
+    let numBypassMaxRes2 = numBypass 123 None (fun x -> max x)
+    System.Console.WriteLine "numBypassMaxRes2"
+    System.Console.WriteLine numBypassMaxRes2  
     0
