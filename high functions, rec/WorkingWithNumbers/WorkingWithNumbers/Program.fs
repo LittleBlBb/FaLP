@@ -18,6 +18,24 @@ let cifrSum n =
             cifrSum1 n1 newSum
     cifrSum1 n 0
 
+let rec fact n =
+    if n = 1 || n = 0 then 1
+    else n * (fact (n-1))
+
+let factDown n =
+    let rec factDown1 n curMul =
+        if n = 1 || n = 0 then curMul
+        else
+            let newMul = curMul * n
+            let n1 = n - 1
+            factDown1 n1 newMul
+    factDown1 n 1
+
+let choice n f =
+    match f with 
+    | true -> cifrSum n
+    | false -> factDown n
+
 [<EntryPoint>]
 let main(args : string[]) = 
     let cifrSumResult = cifrSumUp 12345
@@ -26,4 +44,10 @@ let main(args : string[]) =
     let cifrSumDownResult = cifrSum 12345
     System.Console.WriteLine "Sum of digits: "
     System.Console.WriteLine cifrSumDownResult
+    let choiceT = choice 123 true
+    System.Console.WriteLine "choiceT"
+    System.Console.WriteLine choiceT
+    let choiceF = choice 5 false
+    System.Console.WriteLine "choiceF"
+    System.Console.WriteLine choiceF  
     0
