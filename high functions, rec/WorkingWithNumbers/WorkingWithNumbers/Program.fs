@@ -31,9 +31,9 @@ let factDown n =
             factDown1 n1 newMul
     factDown1 n 1
        
-let choice n f =
+let choice f n =
     match f with 
-    | true -> cifrSum
+    | true -> cifrSum n
     | false -> factDown n
 
 let cifrMult n =
@@ -63,54 +63,78 @@ let max n =
             max1 n1 newMax
     max1 n 0
 
-let numBypass number (acc: int option) func =
+let numBypass number func (acc: int option) =
     let accValue = defaultArg acc 0
     accValue + func number
-    
+
+let numBypassCond number func (acc : int option) predicate = 
+    let rec bypass n curAcc =
+        match n with
+        | 0 -> curAcc
+        | _ -> 
+            let n1, digit = updateVariables n
+            match predicate digit with
+            | true -> bypass n1 (func curAcc digit)
+            | false -> bypass n1 curAcc
+
+    let initialAcc = defaultArg acc 0
+    bypass (abs number) initialAcc
+
 
 [<EntryPoint>]
 let main(args : string[]) = 
-    let cifrSumResult = cifrSum 12345
-    System.Console.WriteLine "Sum of digits: "
-    System.Console.WriteLine cifrSumResult
-    let fact5Result = fact 5
-    System.Console.WriteLine "Fact 5: "
-    System.Console.WriteLine fact5Result
-    let fact5DownResult = factDown 5
-    System.Console.WriteLine "Fact5 Down"
-    System.Console.WriteLine fact5DownResult
-    let choiceT = choice 123 true
-    System.Console.WriteLine "choiceT"
-    System.Console.WriteLine choiceT
-    let choiceF = choice 5 false
-    System.Console.WriteLine "choiceF"
-    System.Console.WriteLine choiceF  
+    //let cifrSumResult = cifrSum 12345
+    //System.Console.WriteLine "Sum of digits: "
+    //System.Console.WriteLine cifrSumResult
+    //let fact5Result = fact 5
+    //System.Console.WriteLine "Fact 5: "
+    //System.Console.WriteLine fact5Result
+    //let fact5DownResult = factDown 5
+    //System.Console.WriteLine "Fact5 Down"
+    //System.Console.WriteLine fact5DownResult
+    //let choiceT = choice true
+    //System.Console.WriteLine "choiceT"
+    //System.Console.WriteLine choiceT
+    //let choiceF = choice false
+    //System.Console.WriteLine "choiceF"
+    //System.Console.WriteLine choiceF  
 
-    //С указанием начального значения
-    let numBypassSumRes = numBypass 123 (Some 5) (fun x -> cifrSum x)
-    System.Console.WriteLine "numBypassSumRes"
-    System.Console.WriteLine numBypassSumRes   
-    let numBypassMulRes = numBypass 513 (Some 5) (fun x -> cifrMult x)
-    System.Console.WriteLine "numBypassMulRes"
-    System.Console.WriteLine numBypassMulRes   
-    let numBypassMinRes = numBypass 123 (Some 5) (fun x -> min x)
-    System.Console.WriteLine "numBypassMinRes"
-    System.Console.WriteLine numBypassMinRes  
-    let numBypassMaxRes = numBypass 123 (Some 5) (fun x -> max x)
-    System.Console.WriteLine "numBypassMaxRes"
-    System.Console.WriteLine numBypassMaxRes    
+    ////С указанием начального значения
+    //let numBypassSumRes = numBypass 123 (fun x -> cifrSum x) (Some 5)
+    //System.Console.WriteLine "numBypassSumRes"
+    //System.Console.WriteLine numBypassSumRes   
+    //let numBypassMulRes = numBypass 513 (fun x -> cifrMult x) (Some 5)
+    //System.Console.WriteLine "numBypassMulRes"
+    //System.Console.WriteLine numBypassMulRes   
+    //let numBypassMinRes = numBypass 123 (fun x -> min x) (Some 5)
+    //System.Console.WriteLine "numBypassMinRes"
+    //System.Console.WriteLine numBypassMinRes  
+    //let numBypassMaxRes = numBypass 123 (fun x -> max x) (Some 5)
+    //System.Console.WriteLine "numBypassMaxRes"
+    //System.Console.WriteLine numBypassMaxRes    
     
-    //Без указания начального значения
-    let numBypassSumRes2 = numBypass 123 None (fun x -> cifrSum x)
-    System.Console.WriteLine "numBypassSumRes2"
-    System.Console.WriteLine numBypassSumRes2  
-    let numBypassMulRes2 = numBypass 513 None (fun x -> cifrMult x)
-    System.Console.WriteLine "numBypassMulRes2"
-    System.Console.WriteLine numBypassMulRes2   
-    let numBypassMinRes2 = numBypass 123 None (fun x -> min x)
-    System.Console.WriteLine "numBypassMinRes2"
-    System.Console.WriteLine numBypassMinRes2
-    let numBypassMaxRes2 = numBypass 123 None (fun x -> max x)
-    System.Console.WriteLine "numBypassMaxRes2"
-    System.Console.WriteLine numBypassMaxRes2  
+    ////Без указания начального значения
+    //let numBypassSumRes2 = numBypass 123 (fun x -> cifrSum x) None
+    //System.Console.WriteLine "numBypassSumRes2"
+    //System.Console.WriteLine numBypassSumRes2  
+    //let numBypassMulRes2 = numBypass 513 (fun x -> cifrMult x) None
+    //System.Console.WriteLine "numBypassMulRes2"
+    //System.Console.WriteLine numBypassMulRes2   
+    //let numBypassMinRes2 = numBypass 123 (fun x -> min x) None
+    //System.Console.WriteLine "numBypassMinRes2"
+    //System.Console.WriteLine numBypassMinRes2
+    //let numBypassMaxRes2 = numBypass 123 (fun x -> max x) None
+    //System.Console.WriteLine "numBypassMaxRes2"
+    //System.Console.WriteLine numBypassMaxRes2  
+
+    //С условием
+    let sumEvenDigits = numBypassCond 123456 (+) (Some 0) (fun x -> x % 2 = 0)
+    let multOddDigits = numBypassCond 123456 (*) (Some 1) (fun x -> x % 2 = 1)
+    let sumGreaterThan5= numBypassCond 123456 (+) (Some 0) (fun x -> x > 5)
+    System.Console.Write "Sum of even digits: " 
+    System.Console.WriteLine sumEvenDigits
+    System.Console.Write "Product of odd digits: " 
+    System.Console.WriteLine multOddDigits
+    System.Console.Write "Sum of digits > 5: " 
+    System.Console.WriteLine sumGreaterThan5
     0
