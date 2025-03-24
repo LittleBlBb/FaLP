@@ -81,6 +81,15 @@ let numBypassCond number func (acc : int option) predicate =
     bypass (abs number) initialAcc
 
 
+type Widget = { ID: int; Rev: int }
+
+let compareWidgets w1 w2 =
+    if w1.ID < w2.ID then -1 else
+    if w1.ID > w2.ID then 1 else
+    if w1.Rev > w2.Rev then -1 else
+    if w1.Rev > w2.Rev then 1 else
+    0
+
 [<EntryPoint>]
 let main(args : string[]) = 
     //let cifrSumResult = cifrSum 12345
@@ -127,14 +136,34 @@ let main(args : string[]) =
     //System.Console.WriteLine "numBypassMaxRes2"
     //System.Console.WriteLine numBypassMaxRes2  
 
-    //С условием
-    let sumEvenDigits = numBypassCond 123456 (+) (Some 0) (fun x -> x % 2 = 0)
-    let multOddDigits = numBypassCond 123456 (*) (Some 1) (fun x -> x % 2 = 1)
-    let sumGreaterThan5= numBypassCond 123456 (+) (Some 0) (fun x -> x > 5)
-    System.Console.Write "Sum of even digits: " 
-    System.Console.WriteLine sumEvenDigits
-    System.Console.Write "Product of odd digits: " 
-    System.Console.WriteLine multOddDigits
-    System.Console.Write "Sum of digits > 5: " 
-    System.Console.WriteLine sumGreaterThan5
+    ////С условием
+    //let sumEvenDigits = numBypassCond 123456 (+) (Some 0) (fun x -> x % 2 = 0)
+    //let multOddDigits = numBypassCond 123456 (*) (Some 1) (fun x -> x % 2 = 1)
+    //let sumGreaterThan5= numBypassCond 123456 (+) (Some 0) (fun x -> x > 5)
+    //System.Console.Write "Sum of even digits: " 
+    //System.Console.WriteLine sumEvenDigits
+    //System.Console.Write "Product of odd digits: " 
+    //System.Console.WriteLine multOddDigits
+    //System.Console.Write "Sum of digits > 5: " 
+    //System.Console.WriteLine sumGreaterThan5
+    
+    
+    //let list = [1;2;3]
+    //let listsItem2 = list.Item(0)
+    //Console.WriteLine list.Head
+    //Console.WriteLine list.Tail.Head
+    //Console.WriteLine listsItem2
+    //Console.WriteLine list.Length
+
+    let list = [
+        { ID = 92; Rev = 1 }
+        { ID = 110; Rev = 1 }
+        { ID = 100; Rev = 5 }
+        { ID = 100; Rev = 2 }
+        { ID = 92; Rev = 1 }
+    ]
+
+    let sortedWidget = List.sortWith compareWidgets list
+    Console.WriteLine sortedWidget
     0
+

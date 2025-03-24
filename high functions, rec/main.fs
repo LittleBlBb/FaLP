@@ -8,4 +8,6 @@ open System
 [<EntryPoint>]
 let main(args : string[]) =
     System.Console.WriteLine "Hello World!"
+    let solve = solve_lin 3 4 2
+    System.Console.WriteLine solve
     0
