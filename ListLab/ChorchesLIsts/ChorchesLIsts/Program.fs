@@ -1,29 +1,76 @@
-﻿open System
-
-let MkListChucrh n =
-    let rec helper n list = 
-        if n = 0 then list
-        else
-            Console.Write("Write {0} number: ", n)
-            let item = Console.ReadLine() |> int
-            let newList = fun cons nil -> cons item (list cons nil)
-            helper (n - 1) newList
-    if n <= 0 then 
-        fun _ nil -> nil
+﻿// Дополнительные сведения о F# см. на http://fsharp.net
+// Дополнительную справку см. в проекте "Учебник по F#".
+open System
+let rec readList n = 
+    if n=0 then []
     else
-        Console.Write "Write 1-st number: "
-        let head = Console.ReadLine() |> int
-        helper (n-1) (fun cons nil -> cons head nil)
+    let Head = System.Convert.ToInt32(System.Console.ReadLine())
+    let Tail = readList (n-1)
+    Head::Tail
 
-let toList church = 
-    church (fun h t -> h :: t) []
+let readData = 
+    let n=System.Convert.ToInt32(System.Console.ReadLine())
+    readList n
+
+let rec writeList = function
+    | [] -> let z = System.Console.ReadKey()
+            0
+    | (head : int)::tail -> 
+                       System.Console.WriteLine(head)
+                       writeList tail
+
+let theMostFrequenced list = List.nth list (List.findIndex (fun x -> x = (List.max (List.map (fun el -> List.length (List.filter (fun elem -> (elem = el)) list)) list))) (List.map (fun el -> List.length (List.filter (fun elem -> (elem = el)) list)) list))   
+
+let f3 list = Set.toList (Set.ofList (List.filter (fun x -> (((x % 2) = 0)&&(((List.length (List.filter (fun elem -> elem = x) list)) % 2) = 0))) list))
+
+
+let rec cifrSum (n : int) : int = 
+    if n = 0 then 0
+    else (n%10) + (cifrSum (n / 10))
+
+let elOddOrCifrSumOdd (list : 'int list) = List.filter (fun x -> (((x % 2) = 0) || (((cifrSum x) % 2) = 0)))
+
+let canBeSquare list = List.length (List.filter (fun x -> (List.exists (fun el -> el * el = x) list)) list)
+
+let delCount n = 
+    let rec delCount n del count = 
+        if del = n then count + 1
+        else    let del1 = del + 1
+                if (n % del) = 0 then 
+                                        let count1 = count + 1
+                                        delCount n del1 count1
+                else
+                                        delCount n del1 count
+    delCount n 1 0
+
+let makeList3x3 list1 list2 list3 = List.zip3 (List.rev (List.sort list1)) (List.sortBy (fun x -> (cifrSum x)) list2) (List.rev (List.sortBy (fun x -> (delCount x)) list3))
+
+type 'string btree = 
+    Node of 'string * 'string btree * 'string btree
+    | Nil
+
+let prefix root left right = (root(); left(); right())
+let infix root left right = (left(); root(); right())
+let postfix root left right = (left(); right(); root())
+
+let isGlobalMax list index = 
+    let max = List.max list
+    let maxIndex = List.findIndex (fun x -> x = max) list
+    index = maxIndex
 
 [<EntryPoint>]
-let main(args : string[]) =
+
+let main argv = 
+    //let l = readData
+
+    //System.Console.WriteLine(theMostFrequenced l)
+    //writeList (f3 l)
+
+    let zv = [1;2;3;4;5]
+    let ans = isGlobalMax zv 2
+    Console.WriteLine(ans)
 
 
-
-    let listChurch = MkListChucrh 5
-    let result = toList listChurch
-    Console.WriteLine("result: list: {0}", String.Join("; ", result))
     0
+
+

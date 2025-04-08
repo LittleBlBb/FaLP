@@ -7,6 +7,12 @@
       "RelativeMoniker": "D:0:0:{5FB817E6-710D-4136-B1BA-EA608187272D}|WorkingWithNumbers\\WorkingWithNumbers.fsproj|solutionrelative:workingwithnumbers\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kurdicks\\Desktop\\archive\\ConsoleApplication24\\ConsoleApplication24\\Program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kurdicks\\Downloads\\Program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\main.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
     }
   ],
@@ -17,17 +23,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.fs",
+              "DocumentMoniker": "C:\\Users\\Kurdicks\\Desktop\\archive\\ConsoleApplication24\\ConsoleApplication24\\Program.fs",
+              "RelativeDocumentMoniker": "..\\..\\..\\archive\\ConsoleApplication24\\ConsoleApplication24\\Program.fs",
+              "ToolTip": "C:\\Users\\Kurdicks\\Desktop\\archive\\ConsoleApplication24\\ConsoleApplication24\\Program.fs",
+              "RelativeToolTip": "..\\..\\..\\archive\\ConsoleApplication24\\ConsoleApplication24\\Program.fs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAmwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-03T15:09:26.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.fs",
+              "DocumentMoniker": "C:\\Users\\Kurdicks\\Downloads\\Program.fs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\Program.fs",
+              "ToolTip": "C:\\Users\\Kurdicks\\Downloads\\Program.fs",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\Program.fs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAABAAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-03T14:23:03.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "main.fs",
               "DocumentMoniker": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\main.fs",
               "RelativeDocumentMoniker": "..\\main.fs",
               "ToolTip": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\main.fs",
               "RelativeToolTip": "..\\main.fs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-24T08:37:12.634Z",
               "EditorCaption": ""
@@ -38,9 +70,9 @@
               "Title": "Program.fs",
               "DocumentMoniker": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\Program.fs",
               "RelativeDocumentMoniker": "WorkingWithNumbers\\Program.fs",
-              "ToolTip": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\Program.fs",
-              "RelativeToolTip": "WorkingWithNumbers\\Program.fs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAAKcAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\Program.fs*",
+              "RelativeToolTip": "WorkingWithNumbers\\Program.fs*",
+              "ViewState": "AgIAAGABAAAAAAAAAAAWwG8BAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-18T10:20:08.413Z",
               "EditorCaption": ""
