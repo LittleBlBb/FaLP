@@ -67,6 +67,11 @@ let beforeMinimalToTail list =
             loop newIndex targetIndex updatedList
     loop 0 minIndex list
 
+let twoMin list = 
+    let minValue = List.min list
+    let filtered = List.filter (fun x -> x <> minValue) list
+    let secMin = List.min filtered
+    minValue :: secMin :: []
 
 [<EntryPoint>]
 
@@ -81,6 +86,8 @@ let main argv =
     Console.WriteLine(ans)
 
     writeList(beforeMinimalToTail zv)
+
+
 
     0
 
