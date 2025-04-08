@@ -73,6 +73,14 @@ let twoMin list =
     let secMin = List.min filtered
     minValue :: secMin :: []
 
+let isAlternate list =
+    let rec loop head tail = 
+        if tail = [] then true
+        else if (head * (List.head tail) >= 0) then false
+        else
+            loop tail.Head tail.Tail
+    loop (List.head list) list.Tail
+
 [<EntryPoint>]
 
 let main argv = 
@@ -82,11 +90,13 @@ let main argv =
     //writeList (f3 l)
 
     let zv = [5;4;1;2;3;4;5]
+    let zvAlt = [-1; 2; -5; 3; -4] 
     let ans = isGlobalMax zv 2
     Console.WriteLine(ans)
 
     writeList(beforeMinimalToTail zv)
-
+    Console.WriteLine(isAlternate zv)
+    Console.WriteLine(isAlternate zvAlt)
 
 
     0
