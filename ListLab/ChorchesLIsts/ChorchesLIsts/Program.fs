@@ -54,9 +54,19 @@ let infix root left right = (left(); root(); right())
 let postfix root left right = (left(); right(); root())
 
 let isGlobalMax list index = 
-    let max = List.max list
-    let maxIndex = List.findIndex (fun x -> x = max) list
-    index = maxIndex
+    index = List.findIndex (fun x -> x = List.max list) list
+
+let beforeMinimalToTail list = 
+    let minIndex = List.findIndex(fun x -> x = List.min list) list
+    let rec loop currentIndex targetIndex newList=
+        if currentIndex = targetIndex then newList
+        else
+            let tempList = newList @ [List.head newList]
+            let updatedList = List.tail tempList
+            let newIndex = currentIndex + 1 
+            loop newIndex targetIndex updatedList
+    loop 0 minIndex list
+
 
 [<EntryPoint>]
 
@@ -66,10 +76,11 @@ let main argv =
     //System.Console.WriteLine(theMostFrequenced l)
     //writeList (f3 l)
 
-    let zv = [1;2;3;4;5]
+    let zv = [5;4;1;2;3;4;5]
     let ans = isGlobalMax zv 2
     Console.WriteLine(ans)
 
+    writeList(beforeMinimalToTail zv)
 
     0
 
