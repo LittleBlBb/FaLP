@@ -130,6 +130,23 @@ let rec writePairs = function
             Console.WriteLine(sprintf "(%d, %d)" a b)
             writePairs tail
 
+let shuffle (rnd : Random) list = 
+    let rec shuffleRec remaining acc = 
+        match remaining with
+        | [] -> acc
+        | _ ->
+            let index = rnd.Next(List.length remaining)
+            let item = List.item index remaining
+            let rest = List.filter (fun x -> x <> item) remaining
+            shuffleRec rest (item :: acc)
+    shuffleRec list []
+
+let rndReplace (str : string) = 
+    let rnd = Random()
+    str.Split(' ')
+    |> Array.toList
+    |> shuffle rnd
+    |> String.concat " "
 
 [<EntryPoint>]
 let main argv = 
@@ -166,7 +183,9 @@ let main argv =
     //let arr4 = [|4;3;2;1|]
     //let res181 = Array.concat ([arr3; arr4])
     //printf "%A" res181
-    //19
+    ////19
+    //let str = "Какая-то строка с буквами из которых состоят слова, которые и образуют строку"
+    //Console.WriteLine(rndReplace str)
     0
 
 
