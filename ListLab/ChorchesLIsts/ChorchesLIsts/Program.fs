@@ -85,6 +85,15 @@ let countMinimal list =
     let min = List.min list
     List.length (List.filter(fun x -> x = min) list)
 
+let average list = 
+    List.sum list / List.length list
+
+let filterBetweenAvgAndMax list = 
+    let avg = average list
+    let maxVal = List.max list
+    List.filter(fun x -> x > avg && x < maxVal) list
+
+
 [<EntryPoint>]
 
 let main argv = 
@@ -102,6 +111,7 @@ let main argv =
     Console.WriteLine(isAlternate zv)
     Console.WriteLine(isAlternate zvAlt)
     Console.WriteLine(countMinimal zv)
+    writeList(filterBetweenAvgAndMax zv)
 
     0
 
