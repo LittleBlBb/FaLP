@@ -81,6 +81,10 @@ let isAlternate list =
             loop tail.Head tail.Tail
     loop (List.head list) list.Tail
 
+let countMinimal list =
+    let min = List.min list
+    List.length (List.filter(fun x -> x = min) list)
+
 [<EntryPoint>]
 
 let main argv = 
@@ -89,7 +93,7 @@ let main argv =
     //System.Console.WriteLine(theMostFrequenced l)
     //writeList (f3 l)
 
-    let zv = [5;4;1;2;3;4;5]
+    let zv = [5;4;1;2;3;4;5;1;1;1]
     let zvAlt = [-1; 2; -5; 3; -4] 
     let ans = isGlobalMax zv 2
     Console.WriteLine(ans)
@@ -97,7 +101,7 @@ let main argv =
     writeList(beforeMinimalToTail zv)
     Console.WriteLine(isAlternate zv)
     Console.WriteLine(isAlternate zvAlt)
-
+    Console.WriteLine(countMinimal zv)
 
     0
 

@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("ChorchesLIsts")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b34fa154d034472dfcc75354ccc188098a22b6b")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+020720ca0f7a0011da386da8bcee872e09cac738")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("ChorchesLIsts")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("ChorchesLIsts")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
