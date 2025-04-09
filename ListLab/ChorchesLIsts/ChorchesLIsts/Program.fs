@@ -93,26 +93,71 @@ let filterBetweenAvgAndMax list =
     let maxVal = List.max list
     List.filter(fun x -> x > avg && x < maxVal) list
 
+let rec gcd a b = 
+    if b = 0 then a
+    else gcd b (a%b)
+
+let divisors n =
+    [1 .. int (sqrt (float n))]
+    |> List.filter (fun x -> n % x = 0)
+    |> List.collect (fun x -> [x; n / x])
+    |> List.distinct
+    |> List.sort
+
+let buildPairs n =
+    let divs = divisors n
+    [ for x in divs do 
+        let y = n / x
+        let d = gcd x y
+        let a = x / d
+        let b = y / d
+        yield (a, b) ]
+    |> List.distinct
+
+let readInput =
+    Console.WriteLine("Input n:")
+    let n = Convert.ToInt32(Console.ReadLine())
+    if n <= 0 then
+        Console.WriteLine("numberb must be positive")
+        None
+    else Some n
+
+
+let rec writePairs = function
+    | [] -> Console.WriteLine("Empty.")
+            Console.ReadKey() |> ignore
+    | (a, b) :: tail -> 
+            Console.WriteLine(sprintf "(%d, %d)" a b)
+            writePairs tail
+
 
 [<EntryPoint>]
 
 let main argv = 
-    //let l = readData
+    ////let l = readData
 
-    //System.Console.WriteLine(theMostFrequenced l)
-    //writeList (f3 l)
+    ////System.Console.WriteLine(theMostFrequenced l)
+    ////writeList (f3 l)
 
-    let zv = [5;4;1;2;3;4;5;1;1;1]
-    let zvAlt = [-1; 2; -5; 3; -4] 
-    let ans = isGlobalMax zv 2
-    Console.WriteLine(ans)
+    //let zv = [5;4;1;2;3;4;5;1;1;1]
+    //let zvAlt = [-1; 2; -5; 3; -4] 
+    //let ans = isGlobalMax zv 2
+    //Console.WriteLine(ans)
 
-    writeList(beforeMinimalToTail zv)
-    Console.WriteLine(isAlternate zv)
-    Console.WriteLine(isAlternate zvAlt)
-    Console.WriteLine(countMinimal zv)
-    writeList(filterBetweenAvgAndMax zv)
-
+    //writeList(beforeMinimalToTail zv)
+    //Console.WriteLine(isAlternate zv)
+    //Console.WriteLine(isAlternate zvAlt)
+    //Console.WriteLine(countMinimal zv)
+    //writeList(filterBetweenAvgAndMax zv)
+    
+    //17
+    match readInput with 
+    | None -> ()
+    | Some n -> 
+        let result = buildPairs n
+        Console.WriteLine("New list")
+        writePairs result
     0
+
 
 
