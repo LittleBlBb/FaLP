@@ -132,7 +132,6 @@ let rec writePairs = function
 
 
 [<EntryPoint>]
-
 let main argv = 
     ////let l = readData
 
@@ -150,13 +149,24 @@ let main argv =
     //Console.WriteLine(countMinimal zv)
     //writeList(filterBetweenAvgAndMax zv)
     
-    //17
-    match readInput with 
-    | None -> ()
-    | Some n -> 
-        let result = buildPairs n
-        Console.WriteLine("New list")
-        writePairs result
+    ////17
+    //match readInput with 
+    //| None -> ()
+    //| Some n -> 
+    //    let result = buildPairs n
+    //    Console.WriteLine("New list")
+    //    writePairs result
+
+    ////18
+    //let arr1 = [|"andrey"; "vova"|]
+    //let arr2 = [|"lera"; "liza"|]
+    //let res18 = Array.concat ([arr1; arr2])
+    //printf "%A" res18
+    //let arr3 = [|1;2;3;4|]
+    //let arr4 = [|4;3;2;1|]
+    //let res181 = Array.concat ([arr3; arr4])
+    //printf "%A" res181
+    //19
     0
 
 
