@@ -1,0 +1,30 @@
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\Lab7 Functor and Monada.exe
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\Lab7 Functor and Monada.deps.json
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\Lab7 Functor and Monada.runtimeconfig.json
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\Lab7 Functor and Monada.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\Lab7 Functor and Monada.pdb
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\FSharp.Core.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\cs\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\de\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\es\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\fr\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\it\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\ja\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\ko\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\pl\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\pt-BR\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\ru\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\tr\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\zh-Hans\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\bin\Debug\net8.0\zh-Hant\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.fsproj.AssemblyReference.cache
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.AssemblyInfoInputs.cache
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.AssemblyInfo.fs
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.fsproj.CoreCompileInputs.cache
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.sourcelink.json
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Fun.8C1FF66B.Up2Date
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\refint\Lab7 Functor and Monada.dll
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.pdb
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\Lab7 Functor and Monada.genruntimeconfig.cache
+C:\Users\Kurdicks\Desktop\FaLP\ListLab\Lab7 Functor and Monada\Lab7 Functor and Monada\obj\Debug\net8.0\ref\Lab7 Functor and Monada.dll
