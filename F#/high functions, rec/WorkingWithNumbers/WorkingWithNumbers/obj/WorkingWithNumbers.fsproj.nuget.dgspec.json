@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj": {}
+    "C:\\Users\\Kurdicks\\Desktop\\FaLP\\F#\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj": {
+    "C:\\Users\\Kurdicks\\Desktop\\FaLP\\F#\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj",
+        "projectUniqueName": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\F#\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj",
         "projectName": "WorkingWithNumbers",
-        "projectPath": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj",
+        "projectPath": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\F#\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj",
         "packagesPath": "C:\\Users\\Kurdicks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\obj\\",
+        "outputPath": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\F#\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

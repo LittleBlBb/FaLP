@@ -28,3 +28,33 @@ C:\Users\Kurdicks\Desktop\FaLP\ListLab\Problem 103 Special subset sums\Problem 1
 C:\Users\Kurdicks\Desktop\FaLP\ListLab\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.pdb
 C:\Users\Kurdicks\Desktop\FaLP\ListLab\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.genruntimeconfig.cache
 C:\Users\Kurdicks\Desktop\FaLP\ListLab\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\ref\Problem 103 Special subset sums.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\Problem 103 Special subset sums.exe
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\Problem 103 Special subset sums.deps.json
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\Problem 103 Special subset sums.runtimeconfig.json
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\Problem 103 Special subset sums.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\Problem 103 Special subset sums.pdb
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\FSharp.Core.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\cs\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\de\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\es\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\fr\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\it\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\ja\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\ko\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\pl\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\pt-BR\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\ru\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\tr\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\zh-Hans\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\bin\Debug\net8.0\zh-Hant\FSharp.Core.resources.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.fsproj.AssemblyReference.cache
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.AssemblyInfoInputs.cache
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.AssemblyInfo.fs
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.fsproj.CoreCompileInputs.cache
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.sourcelink.json
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem .9EF49804.Up2Date
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\refint\Problem 103 Special subset sums.dll
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.pdb
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\Problem 103 Special subset sums.genruntimeconfig.cache
+C:\Users\Kurdicks\Desktop\FaLP\F#\Problem 103 Special subset sums\Problem 103 Special subset sums\obj\Debug\net8.0\ref\Problem 103 Special subset sums.dll

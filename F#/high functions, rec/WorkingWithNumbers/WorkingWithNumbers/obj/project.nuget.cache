@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6OeNMcQF3w8=",
+  "dgSpecHash": "114Q2I5Xs40=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj",
+  "projectFilePath": "C:\\Users\\Kurdicks\\Desktop\\FaLP\\F#\\high functions, rec\\WorkingWithNumbers\\WorkingWithNumbers\\WorkingWithNumbers.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kurdicks\\.nuget\\packages\\fsharp.core\\9.0.101\\fsharp.core.9.0.101.nupkg.sha512"
   ],
