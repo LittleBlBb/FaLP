@@ -18,17 +18,54 @@ sumCifrDown(N, CurSum, Sum):- Cifr is N mod 10,
 							  sumCifrDown(N1, CurSum1, Sum).
 sumCifrDown(N, Sum):- sumCifrDown(N, 0, Sum).
 
-writeList([]):-!.
-writeList([H|T]):- write(H), nl, writeList(T).
+square_free(N) :- 
+    \+ has_square_divisor(N, 2).  
 
-r_list(A,N):-r_list(A,N,0,[]).
-r_list(A,N,N,A):-!.
-r_list(A,N,K,B):-read(X),append(B,[X],B1),K1 is K+1,r_list(A,N,K1,B1).
+has_square_divisor(N, Del) :- Del * Del > N, !.   
+has_square_divisor(N, Del) :- 0 is N mod (Del * Del), !, fail.
+has_square_divisor(N, Del) :- NextDel is Del + 1, has_square_divisor(N, NextDel).
 
-sumListDown([], Sum, Sum):- !.
-%sumListDown([H|T], CurSum, Sum):- sumCifrDown()
-sumListDown([H|T], Sum):- sumListDown([H|T], 0, Sum).
+read_list(List, N) :- read_list(List, N, 0, []).
+read_list(List, N, N, List) :- !.
+read_list(List, N, Count, TempList) :- 
+    read(El),
+    append(TempList, [El], NewTempList),
+    NewCount is Count + 1,
+    read_list(List, N, NewCount, NewTempList).
 
-myAppend([], Y, Y).
-myAppend([H|T], Y, [H|T1]):- myAppend(T,Y,T1).
+% write_list(+List)
+write_list([]) :- !.
+write_list([H|T]) :- write(H), nl, write_list(T).
 
+% sum_list_up(+List, ?Sum)
+sum_list_up([], 0).
+
+sum_list_up([H|T], Sum) :-
+    sum_list_up(T, SumTail),
+    Sum is H + SumTail.
+
+% sum_list_down(+List, ?Sum)
+sum_list_down(List, Sum) :- sum_list_down(List, 0, Sum).
+
+sum_list_down([], Acc, Acc).
+sum_list_down([H|T], Acc, Sum) :-
+    NewAcc is Acc + H,
+    sum_list_down(T, NewAcc, Sum).
+
+% sum_prog
+sum_prog :-
+    write("Count elements: "), nl, read(N),
+    write("Enter elements: "), nl, read_list(List, N),
+    sum_list_down(List, Sum),
+    write("Sum elements: "), write(Sum), nl.
+
+% rm_elements_with_sum_digits(+List, +Sum, -Res)
+rm_elements_with_sum_digits([], _, []) :- !.
+
+rm_elements_with_sum_digits([H|T], Sum, Res) :-
+    sum_digits_down(H, DigitSum),
+    DigitSum =:= Sum, !,
+    rm_elements_with_sum_digits(T, Sum, Res).
+
+rm_elements_with_sum_digits([H|T], Sum, [H|ResTail]) :-
+    rm_elements_with_sum_digits(T, Sum, ResTail).
