@@ -5,6 +5,13 @@ max3(X, Y, Z, X):- X > Y, X > Z, !.
 max3(_, Y, Z, Y):- Y > Z, !.
 max3(_, _, Z, Z).
 
+min(X, Y, X):- X < Y, !.
+min(_, Y, Y).
+min(X, Y, Z, U):- min(X, Y, V), min(V, Z, U).
+min3(X, Y, Z, X):- X < Y, X < Z, !.
+min3(_, Y, Z, Y):- Y < Z !.
+min3(_, _, Z, Z).
+
 sumCifrUp(0, 0):- !.
 sumCifrUp(N, Sum):- Cifr is N mod 10, 
 					N1 is N div 10,
@@ -69,3 +76,65 @@ rm_elements_with_sum_digits([H|T], Sum, Res) :-
 
 rm_elements_with_sum_digits([H|T], Sum, [H|ResTail]) :-
     rm_elements_with_sum_digits(T, Sum, ResTail).
+
+minCifrDown(0, 9).
+minCifrDown(N, Min):-
+	N > 0,
+	Digit is N mod 10,
+	N1 is N // 10,
+	minCifrDown(N1, RestMin),
+	Min is min(Digit, RestMin).
+
+minCifrUp(N, Min):- minCifrUp(N, 9, Min).
+minCifrUp(0, Min, Min).
+minCifrUp(N, Acc, Min):-
+	N > 0,
+	Digit is N mod 10,
+	N1 is N // 10,
+	NewAcc is min(Digit, Acc),
+	minCifrUp(N1, NewAcc, Min).
+
+% Рекурсия вверх
+product_not_div_5_up(N, Prod) :-
+    product_not_div_5_up_helper(N, 1, Prod).
+
+product_not_div_5_up_helper(0, Prod, Prod).
+product_not_div_5_up_helper(N, Acc, Prod) :-
+    N > 0,
+    Digit is N mod 10,
+    (Digit mod 5 =\= 0 ->
+        NewAcc is Acc * Digit
+    ;
+        NewAcc is Acc
+    ),
+    N1 is N // 10,
+    product_not_div_5_up_helper(N1, NewAcc, Prod).
+
+% Рекурсия вниз
+product_not_div_5_down(N, Prod) :-
+    digits_not_div_5_down(N, Digits),
+    product_list(Digits, Prod).
+
+digits_not_div_5_down(0, []).
+digits_not_div_5_down(N, Digits) :-
+    N > 0,
+    Digit is N mod 10,
+    N1 is N // 10,
+    (Digit mod 5 =\= 0 ->
+        digits_not_div_5_down(N1, Rest),
+        Digits = [Digit|Rest]
+    ;
+        digits_not_div_5_down(N1, Digits)
+    ).
+
+product_list([], 1).
+product_list([H|T], Prod) :-
+    product_list(T, RestProd),
+    Prod is H * RestProd.
+
+% Нахождение НОД двух чисел
+gcd(A, 0, A) :- !.
+gcd(A, B, GCD) :-
+    B > 0,
+    Remainder is A mod B,
+    gcd(B, Remainder, GCD).
