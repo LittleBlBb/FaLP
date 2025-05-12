@@ -67,6 +67,6 @@ let findBestSpecialSumSet (n: int) : int list =
     |> List.minBy List.sum
 
 let result = findBestSpecialSumSet 7
-printfn "✅ Optimal special sum set for n=7: %A" result
-printfn "📦 Sum: %d" (List.sum result)
-printfn "🔢 Set string: %s" (String.concat "" (List.map string result))
+printfn "Optimal special sum set for n=7: %A" result
+printfn "Sum: %d" (List.sum result)
+printfn "Set string: %s" (String.concat "" (List.map string result))
