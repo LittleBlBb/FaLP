@@ -138,7 +138,8 @@ pr:-	question2(X2),question3(X3),question4(X4),
 		cross(X,X5),visual(X,X6),mobile(X,X7),
 		write(X).
 
-%task 5-6%
+%task 5-6
+%Здесь акинатор по студентам
 
 %1
 sub_group(abraamyan_KG, 1).
